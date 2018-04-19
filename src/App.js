@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './Header';
+import Login from './Login';
+import backgroundImage from './assets/images/draftboard-bg.jpg';
+import './assets/css/App.css';
+
+const style = {
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: '100% 100%',
+};
 
 class App extends Component {
+  componentWillMount() {
+    this.setState({ screenHeight: window.innerHeight });
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={{ ...style, height: this.state.screenHeight }}>
+        <Header />
+        <div className="main-wrapper">
+          <main role="main">
+            <BrowserRouter>
+              <Switch>
+                <Route exact path="/" component={Login} />
+              </Switch>
+            </BrowserRouter>
+          </main>
+        </div>
       </div>
     );
   }

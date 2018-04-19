@@ -1,0 +1,31 @@
+div.main {
+  position: absolute;
+  width: 79%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  color: #4fc1e9;
+}
+
+.subtitle {
+  font-size: 0.8em;
+}
+
+.submit-btn {
+  float: right;
+  width: 112px;
+}
+
+.facebook-btn {
+  float: clear;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 15px;
+}
