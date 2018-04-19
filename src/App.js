@@ -8,7 +8,7 @@ import './assets/css/App.css';
 const style = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundRepeat: 'no-repeat',
-  backgroundSize: '100% 100%',
+  backgroundSize: 'cover',
 };
 
 class App extends Component {
