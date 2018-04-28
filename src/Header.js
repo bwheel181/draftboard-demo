@@ -19,7 +19,7 @@ export default class Header extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navbar color="dark" dark>
           <NavbarToggler onClick={this.toggleNavbar} />
           <NavbarBrand href="/" className="ml-auto mr-auto">
@@ -27,7 +27,7 @@ export default class Header extends React.Component {
           </NavbarBrand>
           <Collapse isOpen={!this.state.collapsed} navbar />
         </Navbar>
-      </div>
+      </React.Fragment>
     );
   }
 }

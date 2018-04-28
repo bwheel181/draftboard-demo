@@ -1,34 +1,37 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Row, Col } from 'reactstrap';
 import Header from './Header';
 import Login from './Login';
-import backgroundImage from './assets/images/draftboard-bg.jpg';
-import './assets/css/App.css';
+import Image from './assets/images/bg-baseball.jpg';
 
-const style = {
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
+const styles = {
+  bgImage: {
+    backgroundImage: `url(${Image})`,
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+    backgroundColor: '#999',
+    height: '100%',
+  },
 };
 
 class App extends Component {
-  componentWillMount() {
-    this.setState({ screenHeight: window.innerHeight });
-  }
   render() {
     return (
-      <div style={{ ...style, height: this.state.screenHeight }}>
-        <Header />
-        <div className="main-wrapper">
-          <main role="main">
+      <Row style={styles.bgImage}>
+        <Col>
+          <Header />
+          <main role="main" className="h-100">
             <BrowserRouter>
               <Switch>
                 <Route exact path="/" component={Login} />
               </Switch>
             </BrowserRouter>
           </main>
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
   }
 }
