@@ -14,22 +14,13 @@ import {
   Container,
 } from 'reactstrap';
 
-const styles = {
-  wrapper: {
-    boxShadow: '5px 5px 10px #121212',
-  },
-  buttons: {
-    marginTop: '1em',
-  },
-};
-
 export default class Login extends React.Component {
   render() {
     return (
-      <Container className="h-100">
-        <Row className="d-flex justify-content-center h-100">
-          <Col xs={10} className="my-auto">
-            <Card style={styles.wrapper}>
+      <Container>
+        <Row>
+          <Col>
+            <Card>
               <CardBody>
                 <CardTitle className="title">Login</CardTitle>
                 <CardSubtitle className="subtitle">
@@ -68,20 +59,12 @@ export default class Login extends React.Component {
                   </Row>
                   <Row className="form-actions">
                     <Col xs={12} md={6}>
-                      <Button
-                        style={styles.buttons}
-                        className="btn-block"
-                        color="success"
-                      >
+                      <Button className="btn-block" color="success">
                         Login
                       </Button>
                     </Col>
                     <Col xs={12} md={6}>
-                      <Button
-                        style={styles.buttons}
-                        className="btn-block"
-                        color="primary"
-                      >
+                      <Button className="btn-block" color="primary">
                         Login with Facebook
                       </Button>
                     </Col>

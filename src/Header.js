@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Collapse, Navbar, NavbarToggler, NavbarBrand } from 'reactstrap';
 
 export default class Header extends React.Component {
@@ -17,6 +16,7 @@ export default class Header extends React.Component {
       collapsed: !this.state.collapsed,
     });
   }
+
   render() {
     return (
       <React.Fragment>
