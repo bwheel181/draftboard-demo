@@ -33,12 +33,9 @@ export default class Header extends React.Component {
           </NavbarBrand>
           <Collapse isOpen={!this.state.collapsed} navbar />
         </Navbar>
-        <Container
-          className="d-flex justify-content-center"
-          style={{ height: window.innerHeight - 60 }}
-        >
+        <div style={{ height: window.innerHeight - 60, padding: 0 }}>
           {this.props.children}
-        </Container>
+        </div>
       </React.Fragment>
     );
   }
