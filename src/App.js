@@ -5,12 +5,13 @@ import Login from './Login';
 
 const App = () => (
   <React.Fragment>
-    <Header />
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Login} />
-      </Switch>
-    </BrowserRouter>
+    <Header>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Login} />
+        </Switch>
+      </BrowserRouter>
+    </Header>
   </React.Fragment>
 );
 
